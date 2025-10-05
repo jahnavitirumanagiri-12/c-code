@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>  // for toupper()
+
+int main() {
+    char str[100];
+    
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // read string with spaces
+
+    for(int i = 0; str[i] != '\0'; i++) {
+        str[i] = toupper(str[i]);  // convert each character to uppercase
+    }
+
+    printf("Uppercase: %s", str);
+    return 0;
+}
