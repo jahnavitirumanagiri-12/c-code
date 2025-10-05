@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int n, rev=0, temp;
+    scanf("%d",&n);
+    temp=n;
+    while(n>0){ rev=rev*10+n%10; n/=10; }
+    printf("%d is %s\n", temp, (temp==rev)?"Palindrome":"Not Palindrome");
+    return 0;
+}
